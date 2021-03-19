@@ -51,7 +51,7 @@ docker: build
 .PHONY: docker-push
 docker-push: docker
 	$(CONTAINER_TOOL) push $(REGISTRY)/$(AUTHOR)/$(NAME):$(VERSION)
-	$(CONTAINER_TOOL) tag $(REGISTRY)/$(AUTHOR)/$(NAME):$(VERSION) $(REGISTRY)/$(NAME):latest
+	$(CONTAINER_TOOL) tag $(REGISTRY)/$(AUTHOR)/$(NAME):$(VERSION) $(REGISTRY)/$(AUTHOR)/$(NAME):latest
 	$(CONTAINER_TOOL) push $(REGISTRY)/$(AUTHOR)/$(NAME):latest
 
 clean:
